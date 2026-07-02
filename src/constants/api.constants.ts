@@ -61,6 +61,12 @@ export const API_PATHS = {
     EXPORT_DOCX: (id: string) => `/analytics/${id}/export/docx`,
     EXPORT_PDF: (id: string) => `/analytics/${id}/export/pdf`,
   },
+  ADMIN: {
+    OVERVIEW: "/admin/overview",
+    USERS: "/admin/users",
+    USER_ROLE: (id: string) => `/admin/users/${id}/role`,
+    USER_STATUS: (id: string) => `/admin/users/${id}/status`,
+  },
   SHARE: {
     WRITING: (id: string) => `/share/writings/${id}`,
     ANALYSIS: (id: string) => `/share/analysis/${id}`,

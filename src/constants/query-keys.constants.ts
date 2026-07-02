@@ -1,4 +1,5 @@
 import type {
+  QueryAdminUsersParams,
   QueryAnalyticsParams,
   QueryBookParams,
   QueryWritingParams,
@@ -48,6 +49,11 @@ export const QUERY_KEYS = {
       ["books", "pending", params] as const,
     recommendations: (payload?: unknown) =>
       ["books", "recommendations", payload] as const,
+  },
+  admin: {
+    overview: ["admin", "overview"] as const,
+    users: (params?: QueryAdminUsersParams) =>
+      ["admin", "users", params] as const,
   },
   suggestions: {
     all: (params?: QueryWritingSuggestionsParams) =>

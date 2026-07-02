@@ -3,7 +3,7 @@
 import type { ComponentType } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { PenLine, LogOut, UserCircle, ChevronRight, BookOpen } from "lucide-react";
+import { PenLine, LogOut, UserCircle, ChevronRight, BookOpen, Users } from "lucide-react";
 import { useAuth } from "@/features/auth";
 import { Button } from "@/components/button";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -105,13 +105,22 @@ export function SidebarNav({
             />
           ))}
           {user?.role === "admin" ? (
-            <NavLink
-              href={ROUTES.ADMIN_BOOKS}
-              label={navMessages.adminBooks}
-              icon={BookOpen}
-              active={isNavActive(pathname, ROUTES.ADMIN_BOOKS)}
-              onNavigate={onNavigate}
-            />
+            <>
+              <NavLink
+                href={ROUTES.ADMIN_BOOKS}
+                label={navMessages.adminBooks}
+                icon={BookOpen}
+                active={isNavActive(pathname, ROUTES.ADMIN_BOOKS)}
+                onNavigate={onNavigate}
+              />
+              <NavLink
+                href={ROUTES.ADMIN_USERS}
+                label={navMessages.adminUsers}
+                icon={Users}
+                active={isNavActive(pathname, ROUTES.ADMIN_USERS)}
+                onNavigate={onNavigate}
+              />
+            </>
           ) : null}
         </nav>
 

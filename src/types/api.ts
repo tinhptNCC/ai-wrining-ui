@@ -7,3 +7,4 @@ export * from "./suggestion";
 export * from "./revision";
 export * from "./share";
 export * from "./book";
+export * from "./admin";

@@ -12,4 +12,5 @@ export { suggestionsService } from "./suggestions.service";
 export { shareService } from "./share.service";
 export { documentsService } from "./documents.service";
 export { booksService } from "./books.service";
+export { adminService } from "./admin.service";
 export type { PublicShareWriting, PublicShareAnalysis } from "@/types/share";

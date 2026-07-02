@@ -20,6 +20,7 @@ export const ROUTES = {
   bookRead: (id: string, chapterId?: string) =>
     chapterId ? `/books/${id}/read?chapter=${chapterId}` : `/books/${id}/read`,
   ADMIN_BOOKS: "/admin/books",
+  ADMIN_USERS: "/admin/users",
   EXPLORE: "/explore",
   PROFILE: "/profile",
   userProfile: (username: string) => `/users/${username}`,
